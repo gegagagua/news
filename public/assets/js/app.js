@@ -69,12 +69,16 @@ document.querySelectorAll(".uc-horizontal-scroll").forEach((e => {
     }))
 }));
 
-const header = document.querySelector('.uc-header');
-
-window.addEventListener('scroll', () => {
-  if (window.pageYOffset > 150) {
-    header.classList.add('uc-navbar-sticky'); // 100px er por add
-  } else {
-    header.classList.remove('uc-navbar-sticky'); // 100px er niche remove
-  }
+document.addEventListener('DOMContentLoaded', () => {
+  const header = document.querySelector('.uc-header');
+  if (!header) return;
+  
+  window.addEventListener('scroll', () => {
+    if (window.pageYOffset > 150) {
+      header.classList.add('uc-navbar-sticky'); // 100px er por add
+    } else {
+      console.log('remove2');
+      header.classList.remove('uc-navbar-sticky'); // 100px er niche remove
+    }
+  });
 });

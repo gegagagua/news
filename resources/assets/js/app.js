@@ -75,6 +75,7 @@ window.addEventListener('scroll', () => {
   if (window.pageYOffset > 150) {
     header.classList.add('uc-navbar-sticky'); // 100px er por add
   } else {
+    console.log('remove');
     header.classList.remove('uc-navbar-sticky'); // 100px er niche remove
   }
 });

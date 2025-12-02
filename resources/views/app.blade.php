@@ -4,14 +4,22 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>News App</title>
-    
-    <!-- Include assets CSS -->
+
+    <!-- preload head styles -->
+    <link rel="preload" href="{{ asset('assets/css/unicons.min.css') }}" as="style">
+    <link rel="preload" href="{{ asset('assets/css/swiper-bundle.min.css') }}" as="style">
+
+    <!-- include uni-core components -->
+    <link rel="stylesheet" href="{{ asset('assets/js/uni-core/css/uni-core.min.css') }}">
+
+    <!-- include styles -->
     <link rel="stylesheet" href="{{ asset('assets/css/unicons.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/prettify.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/swiper-bundle.min.css') }}">
+
+    <!-- include main style -->
     <link rel="stylesheet" href="{{ asset('assets/css/theme/main.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/fonts.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/js/uni-core/css/uni-core.min.css') }}">
+    
     
     @vite(['resources/js/app.js'])
 </head>
